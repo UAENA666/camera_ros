@@ -1,0 +1,11 @@
+<launch>
+    <node name="view_node" pkg="view" type="view_node" output="screen">
+        <param name="image_width" value="1920"/>
+        <param name="image_height" value="1200"/>
+        <param name="pixel_format" value="bgr8"/>
+        <param name="camera_info_url" value="file:///home/wangpeng/camera_ros/src/view/config/pitch_camera.yaml"/>
+        <param name="camera_frame_id" value=""/>
+    </node>
+    <node name="rqt_image_view" pkg="rqt_image_view" type="rqt_image_view" respawn="false" output="screen">
+    </node>
+</launch>
